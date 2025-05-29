@@ -2,54 +2,30 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Banner Rotativo</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  .banner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  img {
-    width: 728px;
-    height: 90px;
-    display: block;
-  }
-</style>
+  <title>Banner Meedir</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .banner-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 728px;
+      height: 90px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <div class="banner-container" id="bannerArea"></div>
-
-  <script>
-    const banners = [
-     {
-    link: "https://reforma.meedir.com.br",
-    img: "https://reforma.meedir.com.br/wp-content/uploads/2021/07/short-add-01.jpg",
-    alt: "Banner Meedir"
-  },
-       {
-    link: "https://reforma.meedir.com.br",
-    img: "https://reforma.meedir.com.br/wp-content/uploads/2021/07/short-add-01.jpg",
-    alt: "Banner Meedir"
-  },
-    {
-    link: "https://reforma.meedir.com.br",
-    img: "https://reforma.meedir.com.br/wp-content/uploads/2021/07/short-add-01.jpg",
-    alt: "Banner Meedir"
-  }
-    ];
-
-    const sorteado = banners[Math.floor(Math.random() * banners.length)];
-    const bannerHTML = `
-      <a href="${sorteado.link}" target="_blank" rel="noopener noreferrer">
-        <img src="${sorteado.img}" alt="${sorteado.alt}">
-      </a>
-    `;
-
-    document.getElementById('bannerArea').innerHTML = bannerHTML;
-  </script>
+  <div class="banner-container">
+    <a href="https://reforma.meedir.com.br" target="_blank" rel="noopener noreferrer">
+      <img src="https://reforma.meedir.com.br/wp-content/uploads/2021/07/short-add-01.jpg" alt="Banner Meedir">
+    </a>
+  </div>
 </body>
 </html>
