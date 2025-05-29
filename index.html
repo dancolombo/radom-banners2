@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Banner Meedir</title>
+  <title>Banner Rotativo Meedir</title>
   <style>
     body {
       margin: 0;
@@ -22,10 +22,35 @@
   </style>
 </head>
 <body>
-  <div class="banner-container">
-    <a href="https://reforma.meedir.com.br" target="_blank" rel="noopener noreferrer">
-      <img src="https://reforma.meedir.com.br/wp-content/uploads/2021/07/short-add-01.jpg" alt="Banner Meedir">
-    </a>
-  </div>
+  <div class="banner-container" id="bannerArea"></div>
+
+  <script>
+    const banners = [
+      {
+        link: "https://reforma.meedir.com.br",
+        img: "https://reforma.meedir.com.br/wp-content/uploads/2021/07/short-add-01.jpg",
+        alt: "Banner Meedir 1"
+      },
+      {
+        link: "https://reforma.meedir.com.br/estilos",
+        img: "https://via.placeholder.com/728x90.png?text=Banner+2+Estilos+de+Reforma",
+        alt: "Banner Meedir 2"
+      },
+      {
+        link: "https://reforma.meedir.com.br/calculadora",
+        img: "https://via.placeholder.com/728x90.png?text=Banner+3+Calculadora+de+Custos",
+        alt: "Banner Meedir 3"
+      }
+    ];
+
+    const sorteado = banners[Math.floor(Math.random() * banners.length)];
+    const bannerHTML = `
+      <a href="${sorteado.link}" target="_blank" rel="noopener noreferrer">
+        <img src="${sorteado.img}" alt="${sorteado.alt}">
+      </a>
+    `;
+
+    document.getElementById('bannerArea').innerHTML = bannerHTML;
+  </script>
 </body>
 </html>
