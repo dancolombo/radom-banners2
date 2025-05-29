@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Banner Rotativo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .banner-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container" id="bannerArea"></div>
+
+  <script>
+    const banners = [
+      {
+        link: "#",
+        img: "banner1.jpg",
+        alt: "Banner 1"
+      },
+      {
+        link: "#",
+        img: "banner2.jpg",
+        alt: "Banner 2"
+      },
+      {
+        link: "#",
+        img: "banner3.jpg",
+        alt: "Banner 3"
+      }
+    ];
+
+    const sorteado = banners[Math.floor(Math.random() * banners.length)];
+    const bannerHTML = `
+      <a href="${sorteado.link}" target="_blank" rel="noopener noreferrer">
+        <img src="${sorteado.img}" alt="${sorteado.alt}">
+      </a>
+    `;
+
+    document.getElementById('bannerArea').innerHTML = bannerHTML;
+  </script>
+</body>
+</html>
